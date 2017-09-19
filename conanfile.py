@@ -9,7 +9,7 @@ class BoostLocaleConan(ConanFile):
     license = "www.boost.org/users/license.html"
     options = {"shared": [True, False]}
     default_options = "shared=False"
-    requires =  "Boost.Level11Group/1.65.1@bincrafters/testing"
+    requires =  "Boost.Level11Group/1.65.1@bincrafters/stable"
    
     #This library is part of one or more cyclic dependency groups within Boost.
     
