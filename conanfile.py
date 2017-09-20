@@ -1,4 +1,4 @@
-from conans import ConanFile, tools, os
+from conans import ConanFile
 
 
 class BoostLocaleConan(ConanFile):
@@ -7,8 +7,6 @@ class BoostLocaleConan(ConanFile):
     url = "https://github.com/bincrafters/conan-boost-locale"
     description = "Please visit http://www.boost.org/doc/libs/1_65_1/libs/libraries.htm"
     license = "www.boost.org/users/license.html"
-    options = {"shared": [True, False]}
-    default_options = "shared=False"
     requires =  "Boost.Level11Group/1.65.1@bincrafters/testing"
    
     #This library is part of one or more cyclic dependency groups within Boost.
