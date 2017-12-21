@@ -3,9 +3,9 @@ from conans import ConanFile
 
 class BoostLocaleConan(ConanFile):
     name = "Boost.Locale"
-    version = "1.65.1"
+    version = "1.66.0"
     requires = \
-        "Boost.Level11Group/1.65.1@bincrafters/testing"
+        "Boost.Level11Group/1.66.0@bincrafters/testing"
     options = {"use_icu": [True, False]}
     default_options = "use_icu=False"
     lib_short_names = ["locale"]
@@ -18,9 +18,9 @@ class BoostLocaleConan(ConanFile):
     # BEGIN
 
     url = "https://github.com/bincrafters/conan-boost-locale"
-    description = "Please visit http://www.boost.org/doc/libs/1_65_1"
+    description = "Please visit http://www.boost.org/doc/libs/1_66_0"
     license = "www.boost.org/users/license.html"
-    build_requires = "Boost.Generator/1.65.1@bincrafters/testing"
+    build_requires = "Boost.Generator/1.66.0@bincrafters/testing"
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
