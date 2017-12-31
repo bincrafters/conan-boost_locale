@@ -7,7 +7,7 @@ from conans import ConanFile, tools
 class BoostLocaleConan(ConanFile):
     name = "boost_locale"
     version = "1.66.0"
-    url = "https://github.com/bincrafters/conan-boost-locale"
+    url = "https://github.com/bincrafters/conan-boost_locale"
     
     options = {"use_icu": [True, False]}
     default_options = "use_icu=False"
