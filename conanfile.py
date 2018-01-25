@@ -11,7 +11,8 @@ class BoostLocaleConan(ConanFile):
     
     options = {"use_icu": [True, False]}
     default_options = "use_icu=False"
-    
+    author = "Bincrafters <bincrafters@gmail.com>"
+    exports = ["LICENSE.md"]
     lib_short_names = ["locale"]
     is_in_cycle_group = True
     is_header_only = False
