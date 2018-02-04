@@ -6,7 +6,7 @@ from conans import ConanFile, tools
 
 class BoostLocaleConan(ConanFile):
     name = "boost_locale"
-    version = "1.66.0"
+    version = "1.65.1"
     url = "https://github.com/bincrafters/conan-boost_locale"
     
     options = {"use_icu": [True, False]}
@@ -18,8 +18,8 @@ class BoostLocaleConan(ConanFile):
     is_header_only = False
     
     requires = (
-        "boost_package_tools/1.66.0@bincrafters/testing",
-        "boost_level11group/1.66.0@bincrafters/testing"
+        "boost_package_tools/1.65.1@bincrafters/testing",
+        "boost_level11group/1.65.1@bincrafters/testing"
     )
     
     def configure(self):
@@ -38,7 +38,7 @@ class BoostLocaleConan(ConanFile):
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
-    build_requires = "boost_generator/1.66.0@bincrafters/testing"
+    build_requires = "boost_generator/1.65.1@bincrafters/testing"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
