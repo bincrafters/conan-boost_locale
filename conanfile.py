@@ -8,14 +8,14 @@ class BoostLocaleConan(ConanFile):
     name = "boost_locale"
     version = "1.66.0"
     url = "https://github.com/bincrafters/conan-boost_locale"
-    
-    options = {"use_icu": [True, False]}
-    default_options = "use_icu=False"
     author = "Bincrafters <bincrafters@gmail.com>"
     exports = ["LICENSE.md"]
     lib_short_names = ["locale"]
-    is_in_cycle_group = True
+    level_group = "boost_level11group"
     is_header_only = False
+
+    options = {"use_icu": [True, False]}
+    default_options = "use_icu=False"
     
     requires = (
         "boost_package_tools/1.66.0@bincrafters/stable",
