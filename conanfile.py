@@ -18,8 +18,8 @@ class BoostLocaleConan(ConanFile):
     default_options = "use_icu=False"
     
     requires = (
-        "boost_package_tools/1.65.1@bincrafters/testing",
-        "boost_level11group/1.65.1@bincrafters/testing"
+        "boost_package_tools/1.65.1@bincrafters/stable",
+        "boost_level11group/1.65.1@bincrafters/stable"
     )
     
     def configure(self):
@@ -38,7 +38,7 @@ class BoostLocaleConan(ConanFile):
     short_paths = True
     generators = "boost"
     settings = "os", "arch", "compiler", "build_type"
-    build_requires = "boost_generator/1.65.1@bincrafters/testing"
+    build_requires = "boost_generator/1.65.1@bincrafters/stable"
 
     def package_id(self):
         getattr(self, "package_id_additional", lambda:None)()
