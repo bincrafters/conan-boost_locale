@@ -15,6 +15,15 @@ class BoostLocaleConan(ConanFile):
     options = {"shared": [True, False], "use_icu": [True, False]}
     default_options = "shared=False", "use_icu=False"
 
+    source_only_deps = [
+        "chrono",
+        "date_time",
+        "numeric_conversion",
+        "ratio",
+        "thread",
+        "unordered"
+    ]
+
     requires = (
         "boost_assert/1.67.0@bincrafters/testing",
         "boost_config/1.67.0@bincrafters/testing",
@@ -23,7 +32,7 @@ class BoostLocaleConan(ConanFile):
         "boost_package_tools/1.67.0@bincrafters/testing",
         "boost_smart_ptr/1.67.0@bincrafters/testing",
         "boost_static_assert/1.67.0@bincrafters/testing",
-        "boost_thread/1.67.0@bincrafters/testing",
+        "boost_system/1.67.0@bincrafters/testing",
         "boost_type_traits/1.67.0@bincrafters/testing"
     )
 
