@@ -13,8 +13,8 @@ class BoostLocaleConan(base.BoostBaseConan):
     options = {"shared": [True, False], "use_icu": [True, False]}
     default_options = "shared=False", "use_icu=False"
     b2_options = {
-        "boost.locale.iconv" : "off",
-        "boost.locale.icu" : "on",
+        "boost.locale.iconv" : "on",
+        "boost.locale.icu" : "off",
     }
     source_only_deps = [
         "chrono",
@@ -34,7 +34,12 @@ class BoostLocaleConan(base.BoostBaseConan):
         "boost_system",
         "boost_type_traits"
     ]
-
+    
+    def configure_additional(self):
+        if self.options.use_icu:
+            self.b2_options["boost.locale.icu"] = "on"
+            self.b2_options["boost.locale.iconv"] = "off"
+        
     def requirements_additional(self):
         if self.options.use_icu:
             self.requires("icu/59.1@bincrafters/stable")
