@@ -35,7 +35,7 @@ class BoostLocaleConan(base.BoostBaseConan):
         "boost_type_traits"
     ]
 
-    def requirements(self):
+    def requirements_additional(self):
         if self.options.use_icu:
             self.requires("icu/59.1@bincrafters/stable")
 
