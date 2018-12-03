@@ -20,7 +20,6 @@ class BoostLocaleConan(base.BoostBaseConan):
         "boost.locale.icu": "off"
     }
     source_only_deps = [
-        "thread",
         "unordered"
     ]
     b2_requires = [
@@ -31,6 +30,7 @@ class BoostLocaleConan(base.BoostBaseConan):
         "boost_smart_ptr",
         "boost_static_assert",
         "boost_system",
+        "boost_thread",
         "boost_type_traits"
     ]
 
