@@ -20,8 +20,10 @@ class BoostLocaleConan(base.BoostBaseConan):
         "boost.locale.icu": "off"
     }
     source_only_deps = [
+        "chrono",
         "date_time",
         "numeric_conversion",
+        "ratio",
         "thread",
         "unordered"
     ]
