@@ -21,6 +21,7 @@ class BoostLocaleConan(base.BoostBaseConan):
     }
     source_only_deps = [
         "date_time",
+        "numeric_conversion",
         "thread",
         "unordered"
     ]
