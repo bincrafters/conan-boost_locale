@@ -4,7 +4,7 @@
 from conans import python_requires
 
 
-base = python_requires("boost_base/1.68.0@bincrafters/testing")
+base = python_requires("boost_base/1.69.0@bincrafters/testing")
 
 class BoostLocaleConan(base.BoostBaseConan):
     name = "boost_locale"
@@ -34,7 +34,6 @@ class BoostLocaleConan(base.BoostBaseConan):
         "boost_iterator",
         "boost_smart_ptr",
         "boost_static_assert",
-        "boost_system",
         "boost_type_traits"
     ]
 
