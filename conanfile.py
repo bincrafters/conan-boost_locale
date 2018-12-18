@@ -34,6 +34,7 @@ class BoostLocaleConan(base.BoostBaseConan):
         "boost_iterator",
         "boost_smart_ptr",
         "boost_static_assert",
+        "boost_system",
         "boost_type_traits"
     ]
 
