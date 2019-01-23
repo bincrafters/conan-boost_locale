@@ -8,6 +8,7 @@ base = python_requires("boost_base/1.67.0@bincrafters/testing")
 
 class BoostLocaleConan(base.BoostBaseConan):
     name = "boost_locale"
+    version = "1.67.0"
     url = "https://github.com/bincrafters/conan-boost_locale"
     lib_short_names = ["locale"]
     options = {"shared": [True, False], "use_icu": [True, False]}
