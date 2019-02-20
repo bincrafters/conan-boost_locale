@@ -15,7 +15,10 @@ class BoostLocaleConan(base.BoostBaseConan):
         "shared": [True, False],
         "use_icu": [True, False]
     }
-    default_options = "shared=False", "use_icu=False"
+    default_options = (
+        "shared=False", 
+        "use_icu=False"
+    )
     b2_options = {
         "boost.locale.iconv": "on",
         "boost.locale.icu": "off"
@@ -46,7 +49,7 @@ class BoostLocaleConan(base.BoostBaseConan):
 
     def requirements_additional(self):
         if self.options.use_icu:
-            self.requires("icu/59.1@bincrafters/stable")
+            self.requires("icu/63.1@bincrafters/stable")
 
     def package_info_additional(self):
         if self.options.use_icu:
